@@ -15,6 +15,10 @@
                     <input type="text" name="nama_barang" id="nama_barang" class="form-control" value="{{ $barang->nama_barang }}" required>
                 </div>
                 <div class="mb-3">
+                    <label for="harga" class="form-label">Harga</label>
+                    <input type="number" name="harga" id="stok" class="form-control" value="{{ $barang->harga }}" required>
+                </div>
+                <div class="mb-3">
                     <label for="stok" class="form-label">Stok</label>
                     <input type="number" name="stok" id="stok" class="form-control" value="{{ $barang->stok }}" required>
                 </div>

@@ -2,18 +2,27 @@
 
 namespace App\Models;
 
+use App\Models\Barang;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User;
 
 class Penjualan extends Model
 {
     use HasFactory;
+
+    protected $guarded =[];
+
     public function barang()
     {
-    Return $this->belongsTo(Barang::class, 'id_barang');
+        return $this->belongsTo(Barang::class,'id_barang');
     }
-    Public function user()
+
+    public function user()
     {
-    Return $this->belongsTo(User::class, 'id_user');
+        return $this->belongsTo(User::class,'id_user')->withDefault([
+            'name'=> 'user tidak ditemukan'
+        ]);
+        
     }
-    }
+}

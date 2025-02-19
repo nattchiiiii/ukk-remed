@@ -17,7 +17,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="stok" class="form-label">Stok</label>
-                    <input type="number" name="stok" id="stok"Bu class="form-control" required>
+                    <input type="number" name="stok" id="stok" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="stok" class="form-label">Harga</label>

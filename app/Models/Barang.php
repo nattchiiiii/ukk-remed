@@ -2,17 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Penjualan;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Barang extends Model
 {
     use HasFactory;
-    protected $guarded = [];
 
+    protected $guarded = [];
+    //mass assignment
     public function penjualans()
     {
-    Return $this->hasMany(Penjualan::class);
+        return $this->hasMany(Penjualan::class);
     }
-
 }

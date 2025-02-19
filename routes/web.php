@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PenjualanController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function()
-{
-Return redirect('/login');
+    return redirect('/login');
 });
 
 Route::resource('barang', BarangController::class);

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('penjualans', function (Blueprint $table) {
             $table->id();
-            $table->ForeignId('id_user')->constrained('users')->nullable();
-            $table->ForeignId('id_user')->constrained ('barangs')->nullable();
-            $table->Integer('jumlah');
+            $table->foreignId('id_user')->constrained('users')->nullable();
+            $table->foreignId('id_barang')->constrained('barangs')->nullable();
+            $table->integer('jumlah');
             $table->timestamps();
         });
     }
